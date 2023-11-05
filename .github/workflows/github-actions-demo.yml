@@ -18,4 +18,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       - name: Veracode Upload And Scan
-        uses: rodriguesesanga/security-shared-library@main
+        uses: veracode/veracode-uploadandscan-action@0.2.6
+        with:
+          repository: rodriguesesanga/security-shared-library
+          ref: main
