@@ -20,5 +20,7 @@ jobs:
       - name: Veracode Upload And Scan
         uses: veracode/veracode-uploadandscan-action@0.2.6
         with:
-          repository: rodriguesesanga/security-shared-library
-          ref: main
+          createprofile: false
+          filepath: '*.py'
+          vid: '${{ secrets.API_ID }}'
+          vkey: '${{ secrets.API_KEY }}'
