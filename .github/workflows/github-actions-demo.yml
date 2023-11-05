@@ -18,10 +18,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       - name: Veracode Upload And Scan
-        uses: veracode/veracode-uploadandscan-action@0.2.6
-        with:
-          appname: 'VeraDemo'
-          createprofile: false
-          filepath: '*.py'
-          vid: '${{ secrets.API_ID }}'
-          vkey: '${{ secrets.API_KEY }}'
+        uses: rodriguesesanga/security-shared-library/blob/main/.sast/source-code-scanning.yml
